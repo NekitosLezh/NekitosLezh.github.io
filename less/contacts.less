@@ -1,0 +1,257 @@
+// fonts
+@font-face {
+	font-family: "MontserratMedium";
+	src: url('../fonts/Montserrat-Medium.ttf') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "RoomBold";
+	src: url('../fonts/RoomBold.ttf') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "MontserratReg";
+	src: url('../fonts/Montserrat-Regular.ttf') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+.m_medium() {
+	font-family: 'MontserratMedium', sans-serif;
+}
+.room_bold() {
+	font-family: 'RoomBold', sans-serif;
+}
+.m_reg(){
+	font-family: 'MontserratReg', sans-serif;
+}
+
+
+// fonts
+
+// colors
+
+@bg: #f2f2f2;
+@text: #212529;
+
+
+// colors
+
+// default settings
+body{
+	.m_medium();
+	color: @text;
+}
+a{
+	color: #000;
+	transition: .2s;
+	&:hover{
+		text-decoration: none;
+		color: tomato;
+	}
+	&:focus{
+		text-decoration: none;
+		color: tomato;
+	}
+}
+
+input{
+	&:focus{
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button{
+	&:focus{
+		outline: none !important;
+		text-decoration: none;
+	}
+	&:active{
+		outline: none !important;
+	}
+}
+
+
+.btn{
+	background-color: transparent;
+	padding: 0.2rem 1rem;
+	border: 0.1rem solid @text;
+	text-transform: uppercase;
+	font-size: 1rem;
+	transition: .2s;
+	&:hover{
+		background-color: @text;
+		color: #fff;
+		transition: .2s;
+	}
+}
+
+// default settings
+
+
+.main-header{
+	padding-bottom: 2rem;
+}
+
+
+// CONTACTS-SECTION
+
+.contacts-section{	
+	&-header{
+		background: url(../img/contacts-section/bg.jpg) center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 6rem 0;
+		text-align: center;
+		&-title{
+			.room_bold();
+			font-size: 2.4rem;
+			text-align: center;
+		}
+	}
+	&-form{
+		padding: 6rem 0;
+		&-block{
+			display: flex;
+			justify-content: space-between;
+			.form{
+				width: 40%;
+				&-input{
+					input{
+						width: 80%;
+					}
+				}
+			}
+			&-text{
+				width: 55%;
+				&-header{
+					.room_bold();
+					font-size: 2.4rem;
+				}
+				&-p{
+					.m_reg();
+				}
+				&-address{
+					margin-top: 4rem;
+				}
+			}
+
+		}
+	}
+}
+
+// MEDIA
+
+@media (max-width: 991px) {
+	.contacts-section{	
+		&-form{
+			padding: 6rem 0;
+			&-block{
+				.form{
+					width: 45%;
+					&-input{
+						input{
+							width: 100%;
+						}
+					}
+				}
+				&-text{
+					width: 50%;
+					&-header{
+						font-size: 2.2rem;
+					}
+					&-p{
+						font-size: 0.9rem;
+					}
+					&-address{
+						margin-top: 4rem;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.contacts-section{	
+		&-form{
+			padding: 6rem 0;
+			&-block{
+				flex-wrap: wrap;
+				flex-direction: column-reverse;
+				.form{
+					width: 100%;
+					margin-top: 1rem;
+					&-input{
+						input{
+							width: 60%;
+						}
+					}
+				}
+				&-text{
+					width: 100%;
+					&-address{
+						margin-top: 2rem;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.contacts-section{	
+		&-form{
+			&-block{
+				.form{
+					width: 80%;
+					margin-top: 2rem;
+					&-input{
+						input{
+							width: 100%;
+						}
+					}
+				}
+				&-text{
+					width: 100%;
+					text-align: center;
+				}
+
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.contacts-section{	
+		&-form{
+			&-block{
+				.form{
+					width: 100%;
+					margin-top: 1rem;
+					&-input{
+					}
+				}
+			}
+		}
+	}
+}
+
+// MEDIA
+
+// CONTACTS-SECTION

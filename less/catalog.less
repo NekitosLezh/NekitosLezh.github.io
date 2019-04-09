@@ -1,0 +1,105 @@
+// fonts
+@font-face {
+	font-family: "MontserratMedium";
+	src: url('../fonts/Montserrat-Medium.ttf') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "RoomBold";
+	src: url('../fonts/RoomBold.ttf') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "MontserratReg";
+	src: url('../fonts/Montserrat-Regular.ttf') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+.m_medium() {
+	font-family: 'MontserratMedium', sans-serif;
+}
+.room_bold() {
+	font-family: 'RoomBold', sans-serif;
+}
+.m_reg(){
+	font-family: 'MontserratReg', sans-serif;
+}
+
+
+// fonts
+
+// colors
+
+@bg: #f2f2f2;
+@text: #212529;
+
+
+// colors
+
+// default settings
+body{
+	.m_medium();
+	color: @text;
+}
+a{
+	color: #000;
+	transition: .2s;
+	&:hover{
+		text-decoration: none;
+		color: tomato;
+	}
+	&:focus{
+		text-decoration: none;
+		color: tomato;
+	}
+}
+
+input{
+	&:focus{
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button{
+	&:focus{
+		outline: none !important;
+		text-decoration: none;
+	}
+	&:active{
+		outline: none !important;
+	}
+}
+
+
+.btn{
+	background-color: transparent;
+	padding: 0.2rem 1rem;
+	border: 0.1rem solid @text;
+	text-transform: uppercase;
+	font-size: 1rem;
+	transition: .2s;
+	&:hover{
+		background-color: @text;
+		color: #fff;
+		transition: .2s;
+	}
+}
+
+
+.main-header{
+	padding-bottom: 2rem;
+}
+
+
